@@ -7,17 +7,10 @@ import pandas as pd
 class Tests(unittest.TestCase):
     #tests if a file is a csv
     def test_csv(self):
-        print('Testing if a file is a CSV')
         path = "./testfiles"
         testfilelist = os.listdir(path)
         testfile = testfilelist[1]
         self.assertEqual(testfile[len(testfile)-4:],'.csv', "Not a csv file")
-
-    #test the name method
-    def test_name(self):
-        path = "./testfiles/test1.csv"
-        filename = name(path)
-        self.assertEqual(filename,'test1.csv', "Name incorrect")
 
     #test the combine method
     def test_combine(self):
